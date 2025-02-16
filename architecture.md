@@ -94,11 +94,4 @@
 - HTTPSによる通信
 
 ## 生成コード品質
-* Goのコーディング規約（`gofmt`, `golint`準拠）
-    * `gofmt`によるコード整形を必須とする。
-    * `golint`による静的解析を行い、指摘事項を修正する。
-* Go style guide準拠
-    * Effective Go: [https://go.dev/doc/effective_go](https://go.dev/doc/effective_go)
-    * Code Review Comments: [https://go.dev/wiki/CodeReviewComments](https://go.dev/wiki/CodeReviewComments)
-* エラーハンドリングの方針
-    * エラーは可能な限り詳細な情報を付与して返す。
+[コーディング規約](./coding-rule.md)を参照
