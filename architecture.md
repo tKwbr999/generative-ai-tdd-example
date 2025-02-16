@@ -2,9 +2,9 @@
 
 ## システム概要
 ### 技術スタック
-- バックエンド: Go 1.21
-- Webフレームワーク: atreugo v11
-- データベース: MongoDB 6.0
+- バックエンド: Go(latest)
+- Webフレームワーク: atreugo(latest)
+- データベース: postgreSQL(latest)
 - API形式: REST
 - 開発手法: クリーンアーキテクチャ + TDD
 
@@ -102,13 +102,3 @@
     * Code Review Comments: [https://go.dev/wiki/CodeReviewComments](https://go.dev/wiki/CodeReviewComments)
 * エラーハンドリングの方針
     * エラーは可能な限り詳細な情報を付与して返す。
-    * `errors.Wrap`などを用いて、エラーコンテキストを保持する。
-    * recover処理を適切に行い、panicを捕捉する。
-* ログ出力の方針
-    * 構造化ログを使用する (`zap`, `logrus`など)。
-    * ログレベルを適切に設定する (Info, Warn, Errorなど)。
-    * 本番環境ではJSON形式でログを出力する。
-* コメントの記述方針
-    * 公開API、関数には必ずコメントを記述する。
-    * コメントはGoDoc形式に準拠する。
-    * 処理の意図、背景を明確に記述する。
