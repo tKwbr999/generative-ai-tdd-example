@@ -14,6 +14,10 @@
         *   システム構成の理解
         *   ディレクトリ構造の確認
         *   技術スタックの確認
+    *   `coding-rule.md`の解析
+        *   コードスタイルの理解
+        *   テストの理解
+        *   レビュー内容の確認
 
 2.  **サンプル機能仕様の作成**
     *   ユーザー管理機能の仕様書作成
@@ -61,27 +65,11 @@
     *   データベースURIは環境変数`ENVIRONMENT`によって切り替えます。
     *   各種ミドルウェアなどのuser名、パスワード、そのほかセキュリティ的にgithubに乗せてはいけないものは全て環境変数にまとめるようにする。
     *   `env.sample`はgitに載せて良い。
-    *   docker-compose.ymlの設定例
-        ```yaml
-        version: "3.9"
-        services:
-          app:
-            build: .
-            ports:
-              - "8080:8080"
-            environment:
-              ENVIRONMENT: dev
-            depends_on:
-              - mongo
-          mongo:
-            image: mongo:6.0
-            ports:
-              - "27017:27017"
-            volumes:
-              - mongo_data:/data/db
-        volumes:
-          mongo_data:
-        ```
+
+7. **コードチェック**
+    * コンパイルエラーがないこと
+    * テストを全てパスすること
+    * コーディング規約を遵守すること
 
 ## 成果物
 *   プロジェクトの基本構造
